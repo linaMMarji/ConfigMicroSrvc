@@ -1,3 +1,5 @@
+server:
+   port: 0
 tracer:
    property: "I AM THE DEFAULT"
 management.endpoints.web.exposure.include: '*'
