@@ -7,3 +7,18 @@ eureka:
             default-zone: http://localhost:8761/eureka/
     instance:
         prefer-ip-address: true                
+spring:
+  cloud:
+    gateway:
+      discovery:
+        locator:
+          enabled: true
+      routes:
+      - id: LicensingService
+        uri: http://Licensing-Service/
+        predicates:
+        - Path=/Licensing/**
+      - id: OrganizationService
+        uri: http://Organization-Service/
+        predicates:
+        - Path=/Organization/**
