@@ -22,3 +22,8 @@ spring:
         uri: http://Organization-Service/
         predicates:
         - Path=/Organization/**
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"
