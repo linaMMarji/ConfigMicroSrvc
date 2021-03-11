@@ -19,7 +19,7 @@ spring:
         predicates:
         - Path=/Licensing/**
       - id: OrganizationService
-        uri: http://Organization-Service/
+        uri: lb://Organization-Service/
         predicates:
         - Path=/Organization/**
 management:
