@@ -18,6 +18,8 @@ spring:
         uri: http://Licensing-Service/
         predicates:
         - Path=/Licensing/**
+        filters:
+        - RewritePath=/Licensing/(?<path>.*), /$\{path}
       - id: OrganizationService
         uri: lb://Organization-Service/
         predicates:
