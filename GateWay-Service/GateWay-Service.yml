@@ -15,7 +15,7 @@ spring:
           enabled: true
       routes:
       - id: LicensingService
-        uri: http://Licensing-Service/
+        uri: lb://Licensing-Service/
         predicates:
         - Path=/Licensing/**
         filters:
