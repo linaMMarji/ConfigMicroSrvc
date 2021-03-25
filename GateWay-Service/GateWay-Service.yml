@@ -38,4 +38,4 @@ keycloak.resource: SpringBoot-MicroService
 keycloak.credentials.secret: 397f65b3-a418-4db9-afda-5d20e2c4af52
 keycloak.use-resource-role-mappings: true
 keycloak.bearer-only: true
-logging.level.org.keycloak=TRACE
+logging.level.org.keycloak: TRACE
