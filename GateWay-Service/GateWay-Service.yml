@@ -10,6 +10,8 @@ eureka:
 spring:
   cloud:
     gateway:
+      default-filters:
+      - TokenRelay
       discovery:
         locator:
           enabled: true
@@ -19,7 +21,8 @@ spring:
         predicates:
         - Path=/Licensing/**
         filters:
-        - RewritePath=/Licensing/(?<path>.*), /$\{path}
+        - RemoveRequestHeader=Cookie
+        #- RewritePath=/Licensing/(?<path>.*), /$\{path}
       - id: OrganizationService
         uri: lb://Organization-Service/
         predicates:
