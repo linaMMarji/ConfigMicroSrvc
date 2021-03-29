@@ -49,7 +49,7 @@ spring:
         provider:
           keycloak:
             token-uri: http://localhost:8080/auth/realms/SpringBootKeycloakApp/protocol/openid-connect/token
-            authorization-uri: http://192.168.0.100:5555/realms/SpringBootKeycloakApp/protocol/openid-connect/auth
+            authorization-uri: http://localhost:8080/auth/realms/SpringBootKeycloakApp/protocol/openid-connect/auth
             userinfo-uri: http://localhost:8080/auth/realms/SpringBootKeycloakApp/protocol/openid-connect/userinfo
         registration:
           keycloak:
