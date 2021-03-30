@@ -21,8 +21,8 @@ spring:
         predicates:
         - Path=/Licensing/**
         filters:
-        - TokenRelay=
-        - RemoveRequestHeader=Cookie
+        - TokenRelay: 
+        - RemoveRequestHeader: Cookie
       - id: OrganizationService
         uri: lb://Organization-Service/
         predicates:
