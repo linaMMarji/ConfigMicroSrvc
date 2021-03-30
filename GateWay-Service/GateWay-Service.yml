@@ -33,27 +33,3 @@ management:
     web:
       exposure:
         include: "*"
-keycloak.realm: SpringBootKeycloakApp
-keycloak.auth-server-url: http://localhost:8080/auth
-keycloak.ssl-required: external
-keycloak.resource: SpringBoot-MicroService
-keycloak.credentials.secret: 397f65b3-a418-4db9-afda-5d20e2c4af52
-keycloak.use-resource-role-mappings: true
-keycloak.bearer-only: true
-logging.level.org.keycloak: TRACE
-spring:
-  security:
-    oauth2:
-      client:
-        provider:
-          keycloak:
-            token-uri: http://localhost:8080/auth/realms/SpringBootKeycloakApp/protocol/openid-connect/token
-            authorization-uri: http://localhost:8080/auth/realms/SpringBootKeycloakApp/protocol/openid-connect/auth
-            userinfo-uri: http://localhost:8080/auth/realms/SpringBootKeycloakApp/protocol/openid-connect/userinfo
-        registration:
-          keycloak:
-            provider: keycloak
-            client-id: SpringBoot-MicroService
-            client-secret: 397f65b3-a418-4db9-afda-5d20e2c4af52
-            authorization-grant-type: authorization_code
-            redirect-uri: "{baseUrl}/login/oauth2/code/keycloak"
