@@ -11,34 +11,6 @@ spring:
   autoconfigure:
     # TODO: remove when fixed https://github.com/spring-projects/spring-security/issues/6314
     exclude: org.springframework.boot.actuate.autoconfigure.security.reactive.ReactiveManagementWebSecurityAutoConfiguration
-  cloud:
-    gateway:
-      default-filters:
-      - TokenRelay
-      discovery:
-        locator:
-          enabled: true
-      routes:
-      - id: LicensingService
-        uri: lb://Licensing-Service/
-        predicates:
-        - Path=/Licensing/**
-        filters:
-        - TokenRelay=
-      - id: OrganizationService
-        uri: lb://Organization-Service/
-        predicates:
-        - Path=/organization/**
-        filters:
-        - RewritePath=/organization/(?<path>.*), /$\{path}
-management:
-  endpoints:
-    web:
-      exposure:
-spring:
-  #  autoconfigure:
-  #     TODO: remove when fixed https://github.com/spring-projects/spring-security/issues/6314
-  #    exclude: org.springframework.boot.actuate.autoconfigure.security.reactive.ReactiveManagementWebSecurityAutoConfiguration
   thymeleaf:
     cache: false
   security:
@@ -61,3 +33,24 @@ spring:
             issuer-uri: http://localhost:8080/auth/realms/SpringBootKeycloakApp
             user-name-attribute: preferred_username
 #            jwk-set-uri: http://uaa:8090/uaa/token_keys
+
+  cloud:
+    gateway:
+      default-filters:
+      - TokenRelay
+      discovery:
+        locator:
+          enabled: true
+      routes:
+      - id: LicensingService
+        uri: lb://Licensing-Service/
+        predicates:
+        - Path=/Licensing/**
+        filters:
+        - TokenRelay=
+      - id: OrganizationService
+        uri: lb://Organization-Service/
+        predicates:
+        - Path=/organization/**
+        filters:
+        - RewritePath=/organization/(?<path>.*), /$\{path}
