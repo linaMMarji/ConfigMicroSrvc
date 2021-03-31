@@ -52,10 +52,10 @@ spring:
             client-id: SpringBoot-MicroService
             client-secret: 397f65b3-a418-4db9-afda-5d20e2c4af52
             authorization-grant-type: authorization_code
-            redirect-uri: {baseUrl}/login/oauth2/code/keycloak
+            redirect-uri: http://localhost:8080/auth/realms/SpringBootKeycloakApp/protocol/openid-connect/logout
           keycloak-without-test-scope:
             provider: keycloak
             client-id: SpringBoot-MicroService
             client-secret: 397f65b3-a418-4db9-afda-5d20e2c4af52
             authorization-grant-type: authorization_code
-            redirect-uri: {baseUrl}/login/oauth2/code/keycloak
+            redirect-uri: http://localhost:8080/auth/realms/SpringBootKeycloakApp/protocol/openid-connect/logout
