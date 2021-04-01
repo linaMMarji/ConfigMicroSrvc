@@ -23,7 +23,7 @@ spring:
             client-secret: 397f65b3-a418-4db9-afda-5d20e2c4af52
             authorization-grant-type: authorization_code
             client-authentication-method: public
-            redirect-uri: "{baseUrl}/login/oauth2/code/keycloak"
+          #  redirect-uri: "{baseUrl}/login/oauth2/code/keycloak"
 #            scope: openid,profile,email,resource.read,offline_access
         provider:
           keycloak:
