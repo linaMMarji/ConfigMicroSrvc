@@ -27,11 +27,11 @@ spring:
 #            scope: openid,profile,email,resource.read,offline_access
         provider:
           keycloak:
-            token-uri: http://localhost:8080/auth/realms/SpringBootKeycloakApp/protocol/openid-connect/token
-            authorization-uri: http://localhost:8080/auth/realms/SpringBootKeycloakApp/protocol/openid-connect/auth
-            userinfo-uri: http://localhost:8080/auth/realms/SpringBootKeycloakApp/protocol/openid-connect/userinfo
+            #token-uri: http://localhost:8080/auth/realms/SpringBootKeycloakApp/protocol/openid-connect/token
+            #authorization-uri: http://localhost:8080/auth/realms/SpringBootKeycloakApp/protocol/openid-connect/auth
+            #userinfo-uri: http://localhost:8080/auth/realms/SpringBootKeycloakApp/protocol/openid-connect/userinfo
             user-name-attribute: preferred_username
-           # issuer-uri: http://localhost:8080/auth/realms/SpringBootKeycloakApp
+            issuer-uri: http://localhost:8080/auth/realms/SpringBootKeycloakApp
             #user-name-attribute: preferred_username
 #            jwk-set-uri: http://uaa:8090/uaa/token_keys
 
