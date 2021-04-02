@@ -48,7 +48,7 @@ spring:
         predicates:
         - Path=/Licensing/**
         filters:
-        - RemoveRequestHeader=Cookie
+        - RewritePath=/organization/(?<path>.*), /$\{path}
       - id: OrganizationService
         uri: lb://Organization-Service/
         predicates:
