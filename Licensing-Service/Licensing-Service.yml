@@ -64,11 +64,11 @@ spring:
                 temp:
                     use_jdbc_metadata_defaults: false
         show-sql: true
-    security:
-      oauth2:
-         resourceserver:
-            jwt:
-                issuer-uri: http://localhost:8080/auth/realms/SpringBootKeycloakApp
+   # security:
+    #  oauth2:
+     #    resourceserver:
+      #      jwt:
+       #         issuer-uri: http://localhost:8080/auth/realms/SpringBootKeycloakApp
 
 management:
     endpoints:
