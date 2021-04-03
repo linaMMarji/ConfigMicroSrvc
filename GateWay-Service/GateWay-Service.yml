@@ -50,6 +50,8 @@ spring:
         filters:
             - TokenRelay=
             - RemoveRequestHeader=Cookie
+            - RewritePath=/organization/(?<path>.*), /$\{path}
+
         #filters:
         #- RewritePath=/Licensing/(?<path>.*), /$\{path}
       - id: OrganizationService
