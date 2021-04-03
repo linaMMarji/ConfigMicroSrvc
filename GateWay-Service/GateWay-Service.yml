@@ -48,12 +48,7 @@ spring:
         predicates:
         - Path=/Licensing/**
         filters:
-            - TokenRelay=
-            - RemoveRequestHeader=Cookie
-            - RewritePath=/Licensing/(?<path>.*), /$\{path}
-
-        #filters:
-        #- RewritePath=/Licensing/(?<path>.*), /$\{path}
+        - RewritePath=/Licensing/(?<path>.*), /$\{path}
       - id: OrganizationService
         uri: lb://Organization-Service/
         predicates:
