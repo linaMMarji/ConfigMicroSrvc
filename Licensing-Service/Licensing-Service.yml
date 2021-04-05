@@ -50,6 +50,12 @@ resilience4j.ratelimiter:
       timeoutDuration: 0
       eventConsumerBufferSize: 100
 spring:
+#Rest of properties removed for conciseness
+    cloud.stream.bindings.input.destination: orgChangeTopic
+    cloud.stream.bindings.input.content-type: application/json
+    cloud.stream.bindings.input.group: licensingGroup
+    cloud.stream.kafka.binder.zkNodes: localhost
+    cloud.stream.kafka.binder.brokers: localhost
     datasource:
         driver-class-name: org.postgresql.Driver
         password: p0stgr@s
