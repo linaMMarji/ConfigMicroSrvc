@@ -1,5 +1,5 @@
 server:
-   port: 0
+   port: 4598
 tracer:
    property: "I AM THE ORGANIZATION DEFAULT"
 spring:
