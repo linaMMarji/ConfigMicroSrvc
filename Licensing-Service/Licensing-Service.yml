@@ -51,9 +51,9 @@ resilience4j.ratelimiter:
       eventConsumerBufferSize: 100
 spring:
 #Rest of properties removed for conciseness
-    cloud.stream.bindings.input.destination: orgChangeTopic
-    cloud.stream.bindings.input.content-type: application/json
-    cloud.stream.bindings.input.group: licensingGroup
+    cloud.stream.bindings.consumeStream-in-0.destination: orgChangeTopic
+    cloud.stream.bindings.consumeStream-in-0.content-type: application/json
+    cloud.stream.bindings.consumeStream-in-0.group: licensingGroup
     cloud.stream.kafka.binder.zkNodes: localhost
     cloud.stream.kafka.binder.brokers: localhost
     cloud.stream.kafka.binder.replication-factor: 1
