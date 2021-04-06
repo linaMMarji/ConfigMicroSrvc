@@ -3,8 +3,9 @@ server:
 tracer:
    property: "I AM THE ORGANIZATION DEFAULT"
 spring:
-    cloud.stream.bindings.output.destination: orgChangeTopic
-    cloud.stream.bindings.output.content-type: application/json
+    #cloud.stream.bindings.output.destination: orgChangeTopic
+    #cloud.stream.bindings.output.content-type: application/json
+    cloud.stream.source: orgChangeTopic
     cloud.stream.kafka.binder.zkNodes: localhost
     cloud.stream.kafka.binder.brokers: localhost
     cloud.stream.kafka.binder.replication-factor: 1
