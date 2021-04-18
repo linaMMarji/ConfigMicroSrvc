@@ -104,4 +104,4 @@ keycloak.use-resource-role-mappings: true
 keycloak.bearer-only: true 
 redis.server: localhost
 redis.port: 6379
-logging.file: C:/Users/lina/Desktop/SpringBoot/SpringBootAction/liscense-srvc.log
+logging.file.name: C:/Users/lina/Desktop/SpringBoot/SpringBootAction/liscense-srvc.log
