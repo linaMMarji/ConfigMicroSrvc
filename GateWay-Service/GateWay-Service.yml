@@ -10,7 +10,7 @@ eureka:
 spring:
   cloud:
     gateway:
-     discovery:
+      discovery:
         locator:
           enabled: true
       routes:
