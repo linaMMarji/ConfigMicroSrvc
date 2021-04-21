@@ -26,3 +26,4 @@ spring:
         - Path=/organization/**
         filters:
         - RewritePath=/organization/(?<path>.*), /$\{path}
+logging.level.org.springframework.cloud.sleuth: DEBUG
