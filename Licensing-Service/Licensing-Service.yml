@@ -51,6 +51,7 @@ resilience4j.ratelimiter:
       eventConsumerBufferSize: 100
 spring:
 #Rest of properties removed for conciseness
+    zipkin.baseUrl:  http://localhost:9411
     cloud.stream.bindings.consumeStream-in-0.destination: orgChangeTopic
     cloud.stream.bindings.consumeStream-in-0.content-type: application/json
     cloud.stream.bindings.consumeStream-in-0.group: licensingGroup
