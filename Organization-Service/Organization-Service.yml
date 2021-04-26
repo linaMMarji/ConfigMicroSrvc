@@ -50,3 +50,4 @@ license:
 #keycloak.use-resource-role-mappings: true
 #keycloak.bearer-only: true      
 logging.file.name: C:/Users/lina/Desktop/SpringBoot/SpringBootAction/organization-srvc.log
+spring.zipkin.baseUrl:  http://zipkin:9411
